@@ -16,7 +16,8 @@ def category(request, pk):
     return render(request, 'longfellow/category.html', context={'category_list': category_list})
 
 def about(request):
-    return render(request, 'longfellow/about.html')
+   category_list = Category.objects.all()
+   return render(request, 'longfellow/about.html', context={'category_list': category_list})
 
 def detail(request, pk):
     article = get_object_or_404(Article, pk=pk)
