@@ -17,3 +17,10 @@ def category(request, pk):
 
 def about(request):
     return render(request, 'longfellow/about.html')
+
+def detail(request, pk):
+    article = get_object_or_404(Article, pk=pk)
+    category_list = Category.objects.all()
+
+    return render(request, 'longfellow/detail.html', context={'article': article,
+        'category_list': category_list})
