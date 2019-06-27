@@ -15,10 +15,21 @@
     </div>
     <div class="card-footer text-muted">
         Posted on {{ article.created_time }} by
-        <a href="#">{{ article.author }}</a>
+        <a href="/about.html">{{ article.author }}</a>
     </div>
   {% empty %}
     <div class="card-body">暂时还没有发布的文章！</div>
   {% endfor %}
 </div>
 {% endblock main %}
+
+{% block pagination %}
+<ul class="pagination justify-content-center mb-4">
+    <li class="page-item">
+        <a class="page-link" href="#">&larr; Older</a>
+    </li>
+    <li class="page-item disabled">
+        <a class="page-link" href="#">Newer &rarr;</a>
+    </li>
+</ul>
+{% endblock pagination %}

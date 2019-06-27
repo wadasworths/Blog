@@ -1,2 +1,4 @@
-# blog
-Django web App
+# Django Web Blog && Restful(ing)
+
+Django Blog
+

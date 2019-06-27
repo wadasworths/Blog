@@ -10,8 +10,8 @@ def index(request):
     return render(request, 'longfellow/index.html', context={'article_list': article_list,
         'category_list': category_list})
 
-def category(request, pk):
-    category_list = get_object_or_404(Category, pk=pk)
+def category(request):
+    category_list = Category.objects.all()
     
     return render(request, 'longfellow/category.html', context={'category_list': category_list})
 
